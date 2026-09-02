@@ -1,0 +1,12 @@
+[
+  {
+    "id": "more_survivor_stuff_Elf",
+    "type": "MOD_INFO",
+    "name": "More Survivor stuff",
+    "authors": [ "Broken \"Spaghetti\" Admin" ],
+    "maintainers": [ "Broken \"Spaghetti\" Admin", "TheGoatGod", "OromisElf" ],
+    "description": "Adds more variety to survivor equipment, styles, crafts etc.",
+    "category": "vehicles",
+    "dependencies": [ "dda" ]
+  }
+]

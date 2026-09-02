@@ -1,0 +1,13 @@
+[
+	{
+		"type": "mutation",
+		"id": "slow_down",
+		"name": { "str": "Slowed Down" },
+		"points": 0,
+		"description": "Your equipment is heavy enough to slow you down.",
+		"valid": false,
+		"purifiable": false,
+		"types": [ "Equipment" ],
+		"enchantments": [ { "values": [ { "value": "MOVE_COST", "multiply": -0.1 } ] } ]
+	}
+]
