@@ -3,7 +3,7 @@
     "id": "textbooks",
     "type": "item_group",
     "subtype": "distribution",
-    "copy-from": "textbook",
+    "copy-from": "textbooks",
     "extend": {
       "entries": [
         { "item": "mss_gunsmithing_book", "prob": 2 }
