@@ -67,7 +67,7 @@
   },
   {
     "id": "mss_mask_extralsurvivor",
-	"type": "ITEM",
+    "type": "ITEM",
     "subtypes": [ "TOOL", "ARMOR" ],
     "category": "armor",
     "name": { "str": "extra-light survivor mask" },
@@ -88,14 +88,14 @@
     "environmental_protection_with_filter": 15,
     "qualities": [ [ "GLARE", 1 ] ],
     "flags": [ "VARSIZE", "STURDY", "SUN_GLASSES", "RAINPROOF", "PADDED" ],
-    "pocket_data": [ 
-	  { 
-		"pocket_type": "MAGAZINE_WELL", 
-		"rigid": true, 
-		"flag_restriction": [ "GASFILTER_SM" ],
-		"default_magazine": "gasfilter_sm" 
-	  }
-	],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [ "GASFILTER_SM" ],
+        "default_magazine": "gasfilter_sm"
+      }
+    ],
     "use_action": [ "GASMASK_ACTIVATE" ],
     "tick_action": [ "GASMASK" ],
     "tool_ammo": "gasfilter_s"
@@ -117,8 +117,19 @@
     "symbol": "[",
     "looks_like": "hood_lsurvivor",
     "color": "green",
-    "armor": [ { "encumbrance": 10, "coverage": 100, "covers": [ "head" ] } ],
+    "armor": [
+      {
+        "material": [
+          { "type": "kevlar_layered", "covered_by_mat": 100, "thickness": 1.0, "ignore_sheet_thickness": true },
+          { "type": "cotton", "covered_by_mat": 100, "thickness": 0.1 }
+        ],
+        "covers": [ "head" ],
+        "coverage": 100,
+        "encumbrance": 10
+      }
+    ],
     "warmth": 10,
+    "material_thickness": 1.0,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY", "OUTER" ]
   },
   {
@@ -215,7 +226,7 @@
   },
   {
     "id": "mss_mask_superhsurvivor",
-	"type": "ITEM",
+    "type": "ITEM",
     "subtypes": [ "TOOL", "ARMOR" ],
     "category": "armor",
     "name": { "str": "superheavy survivor mask" },
@@ -237,14 +248,14 @@
     "environmental_protection_with_filter": 17,
     "qualities": [ [ "GLARE", 1 ] ],
     "flags": [ "VARSIZE", "STURDY", "SUN_GLASSES", "RAINPROOF", "PADDED" ],
-    "pocket_data": [ 
-	  { 
-		"pocket_type": "MAGAZINE_WELL", 
-		"rigid": true, 
-		"flag_restriction": [ "GASFILTER_SM" ],
-		"default_magazine": "gasfilter_sm" 
-	  }
-	],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [ "GASFILTER_SM" ],
+        "default_magazine": "gasfilter_sm"
+      }
+    ],
     "use_action": [ "GASMASK_ACTIVATE" ],
     "tool_ammo": "gasfilter_s"
   },
@@ -298,7 +309,7 @@
     ],
     "warmth": 15,
     "flags": [ "VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY" ],
-		"passive_effects": [ { "has": "WORN", "condition": { "not": { "u_has_strength": 15 } }, "mutations": [ "slowed_down" ] } ]
+    "passive_effects": [ { "has": "WORN", "condition": { "not": { "u_has_strength": 15 } }, "mutations": [ "slowed_down" ] } ]
   },
   {
     "id": "mss_cloak_hsurvivor",
@@ -316,8 +327,25 @@
     "symbol": "[",
     "looks_like": "cloak",
     "color": "dark_gray",
-    "armor": [ { "encumbrance": 18, "coverage": 95, "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ] } ],
+    "armor": [
+      {
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 1.5 } ],
+        "encumbrance": 18,
+        "covers": [ "torso" ]
+      },
+      {
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 1.0 } ],
+        "encumbrance": 10,
+        "covers": [ "arm_l", "arm_r" ]
+      },
+      {
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 1.1 } ],
+        "encumbrance": 12,
+        "covers": [ "leg_l", "leg_r" ]
+      }
+    ],
     "warmth": 40,
+    "material_thickness": 1.5,
     "flags": [ "OVERSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
   },
   {
